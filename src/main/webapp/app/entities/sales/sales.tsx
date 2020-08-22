@@ -10,6 +10,9 @@ import { getEntities } from './sales.reducer';
 import { ISales } from 'app/shared/model/sales.model';
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 
+// importado por @brunidas
+import Tabla from './Tabla'
+
 export interface ISalesProps extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
 
 export const Sales = (props: ISalesProps) => {
@@ -20,6 +23,9 @@ export const Sales = (props: ISalesProps) => {
   const { salesList, match, loading } = props;
   return (
     <div>
+      <Tabla></Tabla>
+      
+{/*       
       <h2 id="sales-heading">
         <Translate contentKey="merlionTestApp.sales.home.title">Sales</Translate>
         <Link to={`${match.url}/new`} className="btn btn-primary float-right jh-create-entity" id="jh-create-entity">
@@ -95,6 +101,7 @@ export const Sales = (props: ISalesProps) => {
           )
         )}
       </div>
+     */}
     </div>
   );
 };
